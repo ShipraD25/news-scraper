@@ -7,7 +7,7 @@ var exphbs = require("express-handlebars");
 var axios = require("axios");
 var cheerio = require("cheerio");
 // Require all models
-//var db = require("./models");
+var db = require("./models");
 
 var PORT = 3000
     // Initialize Express
