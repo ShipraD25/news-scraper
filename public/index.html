@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Scraping With Mongoose</title>
+    <style>
+        body {
+            background-color: #F2F6D0
+        }
+        
+        hr {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 2px;
+        }
+        
+        #wrapper {
+            width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5%;
+        }
+        
+        #articles {
+            display: inline-block;
+            overflow: auto;
+            width: 60%;
+            height: 700px;
+        }
+        
+        #notes {
+            float: right;
+            width: 30%;
+        }
+        
+        textarea,
+        input {
+            display: block;
+            width: 100%;
+            background-color: #FCF5C7;
+        }
+        
+        input {
+            height: 36px;
+            font-size: 24px;
+        }
+        
+        textarea {
+            height: 200px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            <button class="btn btn-outline-success float-right" type="button">Scrape</button>
+            <button class="btn btn-sm btn-outline-secondary float-right" type="button">Saved News</button>
+        </form>
+    </nav>
+    <div id="wrapper">
+        <h1 class="text-center">Buzzfeed News: Latest Stories</h1>
+        <hr/>
+        <div id="articles"></div>
+        <div id="notes"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
