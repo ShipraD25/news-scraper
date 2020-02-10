@@ -38,7 +38,7 @@ $(document).on("click","#shownotes", function () {
 //loop and show the notes if existing
     for (let i =0; i < data.note.length; i ++ ) {
         var title = data.note[i].title
-        var comment = data.note[i].body
+        var comment = data.note[i].comment
         var idNote = data.note[i]._id
 
         let tempNote = `<div class="list-group-item list-group-item-action  mb-1">

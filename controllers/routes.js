@@ -24,7 +24,7 @@ router.get("/", function (req, res) {
     
 });
 
-/*router.get("/save", function (req, res) {
+router.get("/save", function (req, res) {
     db.Article.find({})
     .populate("notes")
     .then(function (dbArticle) {
@@ -37,7 +37,7 @@ router.get("/", function (req, res) {
         res.render("savearticle");
     })
     
-});*/
+});
 
 router.get("/api/scrape", function(req, res) {
     console.log("scrape")
@@ -118,7 +118,7 @@ router.put("/api/article/save/:id", function(req,res) {
 });
 
 router.get("/api/article/:id", function (req, res){
-    db.Article.findOne({_id: req.params.id}).populate("notes")
+    db.Article.findOne({_id: req.params.id}).populate("note")
     .then(function (dbArticle) {
        
         res.json(dbArticle)
