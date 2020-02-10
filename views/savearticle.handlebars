@@ -1,0 +1,61 @@
+<nav class="navbar navbar-dark bg-dark">
+        <form class="form-inline">
+            <a class="navbar-brand" href= "/">News Scraper</a>
+            <button class="btn btn-primary" id="scrape" type="submit">Scrape</button>
+            <br>
+        </form>
+    </nav>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1 class="display-4">News Scraper</h1>
+    <p class="lead">Buzzfeed News Scraper</p>
+  </div>
+</div>
+<div class= "container">
+     {{#each articles}}
+     {{#if saved}}
+     <div class="row">
+     <div class= "col-8">
+         <row class="title mb-1">
+             {{title}}
+         </row>
+         <br>
+         <row class= "link">
+             {{link}}
+         </row>
+     </div>
+     <div class="col-2">
+     <button class="buttonstyle2" id="shownotes" data-id="{{_id}}">Notes</button>
+     </div>
+     </div>
+     {{/if}}
+     {{/each}}
+</div>
+<div class="modal fade" id="modalnote" tabindex="-1" role="dialog" aria-labelledby="my-modal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="list-group" id="thenotes">
+                        
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <label for="notetitle" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="notetitle">
+                            <label for="notebody" class="col-form-label">Note:</label>
+                            <input type="text" class="form-control" id="notebody">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-4" id="buttonsaved">
+                        </div>
+                    </div>
+
+            </div>
+
+            </div>
+        
+        </div>
+
+
+<script src= "app.js"></script>

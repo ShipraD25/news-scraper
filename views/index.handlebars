@@ -3,7 +3,8 @@
             <a class="navbar-brand" href= "/">News Scraper</a>
             <button class="btn btn-primary" id="scrape" type="submit">Scrape</button>
             <br>
-            <button class="btn btn-primary" type="submit">Saved Articles</button>
+         <a class="navbar-brand" href= "/save">Saved </a>
+            <!--<button class="btn btn-primary" type="submit">Saved Articles</button>-->
         </form>
     </nav>
 
@@ -15,6 +16,7 @@
 </div>
 <div class= "container">
      {{#each articles}}
+     {{#unless saved}}
      <div class="row">
      <div class= "col-8">
          <row class="title mb-1">
@@ -25,15 +27,17 @@
              {{link}}
          </row>
      </div>
-     <div class="col-2">
+     <div class="col-4">
          <button class="saveButton" data-id="{{_id}}">Save</button>
      </div>
-     <div class="col-2">
-     <button class="viewButton" id="viewnotes" data-id="{{_id}}">Add Notes</button>
+    
      </div>
-     </div>
+     {{/unless}}
      {{/each}}
 </div>
 
 
-<script src= "/public/app.js"></script>
+
+
+
+<script src= "app.js"></script>
