@@ -1,0 +1,12 @@
+.jumbotron {
+    background-image: url("buzzfeed_news_followup_00.png");
+    background-size: 100% 100%;
+    
+  }
+
+  @media (min-width: 992px){
+    .form-inline a {
+        margin-left : 1em;
+        margin-right : 1em;
+    }
+}

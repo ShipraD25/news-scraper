@@ -1,14 +1,15 @@
 <nav class="navbar navbar-dark bg-dark">
         <form class="form-inline">
             <a class="navbar-brand" href= "/">News Scraper</a>
+            
             <button class="btn btn-primary" id="scrape" type="submit">Scrape</button>
-            <br>
+            
          <a class="navbar-brand" href= "/save">Saved </a>
-            <!--<button class="btn btn-primary" type="submit">Saved Articles</button>-->
+            
         </form>
     </nav>
 
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" >
   <div class="container">
     <h1 class="display-4">News Scraper</h1>
     <p class="lead">Buzzfeed News Scraper</p>
@@ -24,14 +25,15 @@
          </row>
          <br>
          <row class= "link">
-             {{link}}
+            <a href={{this.link}}>{{link}}</a>
          </row>
      </div>
      <div class="col-4">
          <button class="saveButton" data-id="{{_id}}">Save</button>
      </div>
-    
-     </div>
+    </div>
+
+    <br>
      {{/unless}}
      {{/each}}
 </div>
