@@ -3,7 +3,7 @@ This is a web app that displays news articles and allows the user to save it, ad
 ### App-Demo
 ![app-demo](https://media.giphy.com/media/eKTzXSVhZulqh1C2vl/giphy.gif)
 
-### Technol0gy used
+### Technology used
 ***Backend***
 - Nodejs
 - MongoDb
