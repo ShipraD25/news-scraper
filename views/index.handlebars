@@ -16,6 +16,12 @@
   </div>
 </div>
 <div class= "container">
+    {{#unless articles}}
+    <div class="alert alert-warning text-center">
+        <h3>Uh Oh! We don't have any articles</h3>
+        <p>Click <i>Scrape</i> above to get started</p>
+    </div>
+    {{/unless}}
      {{#each articles}}
      {{#unless saved}}
      <div class="row">

@@ -1,6 +1,5 @@
 // Our scraping tools
-// Axios is a promised-based http library, similar to jQuery's Ajax method
-// It works on the client and on the server
+
 var express = require("express");
 var axios = require("axios");
 var cheerio = require("cheerio");
@@ -40,7 +39,7 @@ router.get("/save", function (req, res) {
 });
 
 router.get("/api/scrape", function(req, res) {
-    console.log("scrape")
+
     // First, we grab the body of the html with axios
     axios.get("https://www.buzzfeednews.com/").then(function(response) {
         // Then, we load that into cheerio and save it to $ for a shorthand selector
@@ -78,21 +77,7 @@ router.get("/api/scrape", function(req, res) {
 });
 
 
-// Route for grabbing a specific Article by id, populate it with it's note
-/*app.get("/articles/:id", function(req, res) {
-    // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
-    db.Article.findOne({ _id: req.params.id })
-        // ..and populate all of the notes associated with it
-        .populate("note")
-        .then(function(dbArticle) {
-            // If we were able to successfully find an Article with the given id, send it back to the client
-            res.json(dbArticle);
-        })
-        .catch(function(err) {
-            // If an error occurred, send it to the client
-            res.json(err);
-        });
-});*/
+
 router.put("/api/article/save/:id", function(req,res) {
     
     db.Article.findOneAndUpdate({_id: req.params.id}, {$set:{saved : true} })

@@ -11,7 +11,7 @@ $(document).ready(function() {
 })
 
 $(document).on("click",".saveButton", function () {
-    console.log("save clicked")
+    
     var id = $(this).attr("data-id");
 
     $.ajax({
@@ -53,7 +53,7 @@ $(document).on("click","#shownotes", function () {
           </div>
         </div></div>`
 
-        console.log(tempNote)
+        //console.log(tempNote)
 
         $("#modalnote").find("#thenotes").append(tempNote);
     }
@@ -65,7 +65,7 @@ $(document).on("click","#shownotes", function () {
 });
 
 $(document).on("click", ".delnote", function () {
-    console.log("delnote clicked")
+    
 
     var idArticle = $(this).attr("data-idArticle");
     var idNote = $(this).attr("data-idNote");
@@ -81,7 +81,7 @@ $(document).on("click", ".delnote", function () {
 
 
 $(document).on("click","#savenote", function () {
-    console.log("savenote clicked")
+    
     var id = $(this).attr("data-id");
     var title = $("#notetitle").val().trim();
     var comment = $("#notebody").val().trim();
