@@ -1,9 +1,9 @@
-# news-scraper
+# Mongo-news-scraper
 This is a web app that displays news articles and allows the user to save it, add notes to it and delete notes if they would like. I have used Buzzfeed news for scraping.
 ### App-Demo
 ![app-demo](https://media.giphy.com/media/eKTzXSVhZulqh1C2vl/giphy.gif)
 
-### Technolgy used
+### Technol0gy used
 ***Backend***
 - Nodejs
 - MongoDb
@@ -20,8 +20,8 @@ This is a web app that displays news articles and allows the user to save it, ad
 - Javascript
 - CSS
 - Libraries
- **Jquery**
- **Bootstrap**
+- **Jquery**
+- **Bootstrap**
 
 
  ### Code Snippet 
@@ -68,5 +68,8 @@ router.get("/api/scrape", function(req, res) {
 
 
  ```
-# Heroku link - 
+### Heroku link - 
 https://still-ocean-09388.herokuapp.com/
+
+#### My links
+ - Linkedin https://www.linkedin.com/in/shipra-dyundi-01ba0b14b/
