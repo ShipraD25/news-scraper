@@ -77,22 +77,9 @@ router.get("/api/scrape", function(req, res) {
     });
 });
 
-/*// Route for getting all Articles from the db
-app.get("/articles", function(req, res) {
-    // Grab every document in the Articles collection
-    db.Article.find({})
-        .then(function(dbArticle) {
-            // If we were able to successfully find Articles, send them back to the client
-            res.json(dbArticle);
-        })
-        .catch(function(err) {
-            // If an error occurred, send it to the client
-            res.json(err);
-        });
-});
 
 // Route for grabbing a specific Article by id, populate it with it's note
-app.get("/articles/:id", function(req, res) {
+/*app.get("/articles/:id", function(req, res) {
     // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
     db.Article.findOne({ _id: req.params.id })
         // ..and populate all of the notes associated with it
@@ -146,6 +133,16 @@ router.post("/api/note/save/:id", function(req, res) {
             // If an error occurred, send it to the client
             res.json(err);
         });
+});
+
+router.delete("/api/note/delete/:id", function(req, res){
+    db.Note.findOneAndDelete({_id: req.params.id})
+    .then(function (dbNote) {
+        res.json(dbNote)
+    })
+    .catch(function(err) {
+        res.json(err);
+    });
 });
 
 module.exports = router;

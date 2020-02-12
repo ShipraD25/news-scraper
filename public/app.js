@@ -49,7 +49,7 @@ $(document).on("click","#shownotes", function () {
           <small>${comment}</small>
           </div>
           <div class="col-1">
-          <button class="btn-sm btn-danger deletenote" data-toggle="modal" data-target="#modalnote" data-idNote="${idNote}" data-idArticle="${id}">X</button>
+          <button class="btn-sm btn-danger delnote" data-toggle="modal" data-target="#modalnote" data-idNote="${idNote}" data-idArticle="${id}">X</button>
           </div>
         </div></div>`
 
@@ -63,6 +63,21 @@ $(document).on("click","#shownotes", function () {
       $("#modalnote").modal("show")
     })
 });
+
+$(document).on("click", ".delnote", function () {
+    console.log("delnote clicked")
+
+    var idArticle = $(this).attr("data-idArticle");
+    var idNote = $(this).attr("data-idNote");
+    console.log(idArticle, idNote);
+    $.ajax({
+        method: "DELETE",
+        url: "/api/note/delete/" + idNote,
+    })
+    .then(function (data) {
+        console.log(data);
+    })
+})
 
 
 $(document).on("click","#savenote", function () {
@@ -83,7 +98,7 @@ $(document).on("click","#savenote", function () {
         }
     }).then(function(data) {
         console.log(data)
-        //location.reload()
+        
     });
     $("#notetitle").val("");
     $("notebody").val("");
