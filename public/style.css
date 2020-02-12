@@ -1,3 +1,6 @@
+body {
+  background-color: cornsilk;
+}
 .jumbotron {
     background-image: url("buzzfeed_news_followup_00.png");
     background-size: 100% 100%;
@@ -9,4 +12,21 @@
         margin-left : 1em;
         margin-right : 1em;
     }
+}
+
+.btn {
+  border-radius: 4px;
+  width: 100px;
+}
+.saveButton {
+  border-radius: 4px;
+  width: 90px;
+  height: 40px;
+  background-color: darksalmon;
+}
+.buttonstyle2 {
+  border-radius: 4px;
+  width: 90px;
+  height: 40px;
+  background-color:  darksalmon;
 }
